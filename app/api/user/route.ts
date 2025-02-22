@@ -24,7 +24,7 @@ export async  function GET( req:Request) {
       
 }
 
-export async function POST(req: Request , res:NextResponse) {
+export async function POST(req: Request ) {
   await dbConnect();
   
   console.log('server side post');

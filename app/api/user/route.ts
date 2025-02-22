@@ -2,7 +2,7 @@
 
 import dbConnect from '../../../lib/mongodb';
 import User from '../../../models/Users';
-import { NextRequest, NextResponse,  } from 'next/server';
+
 
 
 export async  function GET( req:Request) {

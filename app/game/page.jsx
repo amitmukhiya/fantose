@@ -5,10 +5,9 @@ import Image from "next/image"
 import { Gift } from "lucide-react"
 import img1 from "@/components/d1f55c73-ad48-4fd3-83a4-0dd2913e1513.jpeg"
 import img2 from "@/components/image-84-700x700.jpeg"
-import img3 from "@/components/download.png"
+
 import Header from "@/components/heade"
 import { Toaster } from "@/components/ui/toaster"
-//import { useToast } from "@/components/ui/use-toast"
 import { useToast } from "@/hooks/use-toast"
 import { useSession, signIn, signOut } from "next-auth/react"
 

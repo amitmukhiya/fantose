@@ -1,7 +1,8 @@
 'use client'
 import AuthFormContainer from "./authFormContainer";
-import { useSession, signIn, signOut } from "next-auth/react"
-import { useRouter } from 'next/router'
+import { useSession} from "next-auth/react"
+//import { useSession, signIn, signOut } from "next-auth/react"
+
 import { redirect } from 'next/navigation'
 
 export default function Home() {

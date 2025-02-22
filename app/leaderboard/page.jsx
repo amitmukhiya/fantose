@@ -25,7 +25,7 @@ export default function Leaderboard() {
     fetchLeaderboardData()
     if (counter.current < 10) {
       counter.current += 1;
-      const timer = setTimeout(() => setState({ num: state.num + 1 }), 100000);
+      const timer = setTimeout(() => setState({ num: state.num + 1 }), 5000);
 
       return () => clearTimeout(timer);
     }

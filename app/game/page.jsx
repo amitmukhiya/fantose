@@ -10,6 +10,8 @@ import Header from "@/components/heade"
 import { Toaster } from "@/components/ui/toaster"
 import { useToast } from "@/hooks/use-toast"
 import { useSession, signIn, signOut } from "next-auth/react"
+import Link from "next/link"
+import { Button } from "@/components/ui/button"
 
 export default function JavelinOver() {
   const [selectedPlayer, setSelectedPlayer] = useState()
@@ -82,7 +84,10 @@ export default function JavelinOver() {
     <section className="space-y-6">
       <Header />
       <Toaster />
+      <div className="flex items-center justify-between">
       <h2 className="text-xl font-bold">My Javelin Over</h2>
+      <Link href='/leaderboard' className="bg-red-900 text-white px-5 py-2 " > <Button> Check Leader Board</Button> </Link>
+      </div>
       <div className="bg-gray-900 rounded-lg p-6">
         <div className="grid grid-cols-3 gap-4 mb-8">
           {javelinButtons.map((button) => (

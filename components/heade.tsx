@@ -7,6 +7,7 @@ import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar"
 import Img1 from '@/components/cricketfantoss.png'
 import { signOut, useSession } from "next-auth/react"
 import { redirect } from "next/navigation"
+import Link from "next/link"
 
 export default function Header() {
   const { data: session } = useSession()
@@ -15,7 +16,7 @@ export default function Header() {
     <header className="border-b border-gray-800 bg-black">
       <div className="container mx-auto px-4 h-16 flex items-center justify-between">
         <div className="flex items-center">
-          <Image src={Img1} alt="Logo" width={200} height={100} className="h-12 w-auto" />
+          <Link href="/game"><Image src={Img1} alt="Logo" width={200} height={100} className="h-12 w-auto" /></Link>
         </div>
 
         <div className="flex items-center text-white space-x-4">

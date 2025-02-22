@@ -12,8 +12,9 @@ import { useEffect, useRef, useState } from "react"
 // ];
 
 
+
 export default function Leaderboard() {
-  const sampleData: [] = [];
+  const sampleData = [];
   const luck=9999999;
   const [leaderboardData, setleaderboardData] = useState([]);
   const [state, setState] = useState({ num: 0 })
@@ -36,7 +37,7 @@ export default function Leaderboard() {
     data.data.map((user, index) => {
       console.log(user);
       let temp=1;
-      user.data.selectedNumbers?.map((num: number, index: any) => {
+      user.data.selectedNumbers?.map((num, index) => {
         
         const acc=(num/luck)*100.0;
         const accuracy=acc.toFixed(2)+"%";

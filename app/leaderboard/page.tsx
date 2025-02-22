@@ -3,13 +3,13 @@
 import Header from "@/components/heade"
 import { Avatar, AvatarFallback } from "@/components/ui/avatar"
 import { useEffect, useRef, useState } from "react"
-const leaderboardData = [
-  { name: "Akshay", accuracy: "79.25%", rank: "#175696" },
-  { name: "Rinku", accuracy: "91.25%", rank: "#1" },
-  { name: "Ranjit", accuracy: "90.10%", rank: "#2" },
-  { name: "Virat", accuracy: "88.75%", rank: "#3" },
-  { name: "Dhoni", accuracy: "87.50%", rank: "#4" },
-];
+// const leaderboardData = [
+//   { name: "Akshay", accuracy: "79.25%", rank: "#175696" },
+//   { name: "Rinku", accuracy: "91.25%", rank: "#1" },
+//   { name: "Ranjit", accuracy: "90.10%", rank: "#2" },
+//   { name: "Virat", accuracy: "88.75%", rank: "#3" },
+//   { name: "Dhoni", accuracy: "87.50%", rank: "#4" },
+// ];
 
 
 export default function Leaderboard() {

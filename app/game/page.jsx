@@ -12,8 +12,8 @@ import { useToast } from "@/hooks/use-toast"
 import { useSession, signIn, signOut } from "next-auth/react"
 
 export default function JavelinOver() {
-  const [selectedPlayer, setSelectedPlayer] = useState<string | null>(null)
-  const [selectedJavelin, setSelectedJavelin] = useState<string | null>(null)
+  const [selectedPlayer, setSelectedPlayer] = useState()
+  const [selectedJavelin, setSelectedJavelin] = useState()
   const [javelinNumber, setJavelinNumber] = useState(["", "", "", "", "", "", ""])
   const [disabledJavelins, setDisabledJavelins] = useState([])
   const { toast } = useToast()

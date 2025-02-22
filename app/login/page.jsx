@@ -11,20 +11,17 @@ import { signIn } from "next-auth/react"
 import SignIn from '../../components/loginComp'
 
 
-type FormData = {
-  email: string
-  password: string
-}
+
 
 export default function LoginForm() {
   const {
     register,
     handleSubmit,
     formState: { errors },
-  } = useForm<FormData>()
+  } = useForm()
   const [isLoading, setIsLoading] = useState(false)
 
-  const onSubmit = async (data: FormData) => {
+  const onSubmit = async (data) => {
     setIsLoading(true)
     // Simulate API call
     await new Promise((resolve) => setTimeout(resolve, 1000))

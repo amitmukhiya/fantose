@@ -16,26 +16,26 @@ export default function JavelinOver() {
   const [selectedPlayer, setSelectedPlayer] = useState<string | null>(null)
   const [selectedJavelin, setSelectedJavelin] = useState<string | null>(null)
   const [javelinNumber, setJavelinNumber] = useState(["", "", "", "", "", "", ""])
-  const [disabledJavelins, setDisabledJavelins] = useState<string[]>([])
+  const [disabledJavelins, setDisabledJavelins] = useState([])
   const { toast } = useToast()
   const { data: session } = useSession()
   console.log(session)
 
   const javelinButtons = Array.from({ length: 6 }, (_, i) => `J${i + 1}`)
 
-  const handlePlayerClick = (player: string) => {
+  const handlePlayerClick = (player) => {
     setSelectedPlayer(player)
     setSelectedJavelin(null)
     setJavelinNumber(["", "", "", "", "", "", ""])
   }
 
-  const handleJavelinClick = (javelin: string) => {
+  const handleJavelinClick = (javelin) => {
     if (!disabledJavelins.includes(javelin)) {
       setSelectedJavelin(javelin)
     }
   }
 
-  const handleNumberInput = (index: number, value: string) => {
+  const handleNumberInput = (index, value) => {
     if (value.length <= 1 && !isNaN(Number(value))) {
       const newNumbers = [...javelinNumber]
       newNumbers[index] = value
